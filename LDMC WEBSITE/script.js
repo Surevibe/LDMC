@@ -52,14 +52,6 @@ function openGoogleMaps() {
         document.getElementById(tabName).style.display = "grid";
         event.currentTarget.classList.add("active");
     }
-      // Login page  password 
-    function togglePassword() {
-        const passwordInput = document.getElementById("password");
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-        } else {
-            passwordInput.type = "password";
-        }
-    }
+    
 
     

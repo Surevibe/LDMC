@@ -1,3 +1,97 @@
+/* Hover Line Effect with Green Gradient */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0F6C37; /* Default text color */
+    transition: color 0.3s ease-in-out;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #00ff00, #008000);
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: -5px;  /* Upper line */
+    transform-origin: left;
+}
+
+.hover-underline::after {
+    bottom: -5px;  /* Lower line */
+    transform-origin: right;
+}
+
+.hover-underline:hover {
+    color: #028f3e; /* Brighter green on hover */
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+
+/* Dropdown Links with Green Hover Underline */
+#patientContent a,
+#healthcareContent a,
+#labManagerContent a,
+#businessContent a {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+#patientContent a::after, #patientContent a::before,
+#healthcareContent a::after, #healthcareContent a::before,
+#labManagerContent a::after, #labManagerContent a::before,
+#businessContent a::after, #businessContent a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #00ff00, #008000);
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-out;
+}
+
+#patientContent a::before, #healthcareContent a::before,
+#labManagerContent a::before, #businessContent a::before {
+    top: -5px; /* Upper line */
+    transform-origin: left;
+}
+
+#patientContent a::after, #healthcareContent a::after,
+#labManagerContent a::after, #businessContent a::after {
+    bottom: -5px; /* Lower line */
+    transform-origin: right;
+}
+
+#patientContent a:hover, #healthcareContent a:hover,
+#labManagerContent a:hover, #businessContent a:hover {
+    color: #c8facc; /* Lighter green on hover */
+}
+
+#patientContent a:hover::after, #patientContent a:hover::before,
+#healthcareContent a:hover::after, #healthcareContent a:hover::before,
+#labManagerContent a:hover::after, #labManagerContent a:hover::before,
+#businessContent a:hover::after, #businessContent a:hover::before {
+    transform: scaleX(1);
+}
+
+
 .logo {
     max-height: 100px;
     width: auto;
@@ -33,6 +127,21 @@ nav ul {
     display: flex;
     list-style: none;
 }
+
+ .group:hover .hidden {
+        display: flex;
+    }
+    .hover-line::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: width 0.3s;
+    }
+    .hover-line:hover::after {
+        width: 100%;
+    }
 
 .nav-btn {
     background: none;
@@ -247,29 +356,6 @@ footer p {
     font-size: 0.875rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    section.bg-green-900 {
-        text-align: center;
-    }
-
-    section.bg-green-900 h1 {
-        font-size: 1.5rem;
-    }
-
-    section.grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    footer .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .flex {
-        flex-direction: column;
-    }
-}
 
 /* Hover Line Effect for Links */
 .hover-line {
@@ -292,5 +378,25 @@ footer p {
 
 .hover-line:hover::after {
     transform: scaleX(1);
+}
+
+/* Spin Loading Message Sent  in Contact Us */
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotateCheck {
+    0% { transform: rotate(0deg) scale(0); opacity: 0; }
+    100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+.animate-popup {
+    animation: popIn 0.3s ease-out;
+}
+
+.animate-check {
+    animation: rotateCheck 0.5s ease-out;
 }
 

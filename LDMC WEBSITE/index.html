@@ -12,11 +12,10 @@
 <body>
     <header class="bg-white py-4 px-6 shadow-md flex justify-between items-center">
         <div class="flex items-center">
-    <a href="index.html">
-        <img src="assets/logo.png" alt="logo" class="logo cursor-pointer">
-    </a>
-</div>
-
+            <a href="index.html">
+                <img src="assets/logo.png" alt="logo" class="logo cursor-pointer">
+            </a>
+        </div>
         <div class="flex items-center space-x-6 ml-auto">
             <nav class="flex space-x-6">
                 <a href="#" id="patientButton" class="text-gray-700 hover:text-green-700 cursor-pointer flex items-center">
@@ -37,7 +36,9 @@
                 </a>
             </nav>
             <div class="flex space-x-4">
-                <button id="searchBtn" class="text-gray-700 hover:text-green-700">🔍 Search</button>
+                <div class="flex items-center bg-white px-2 py-1 rounded-full shadow-sm border border-gray-300 w-32">
+                    <input type="text" placeholder="🔍 Search" class="w-full text-gray-700 outline-none bg-transparent text-xs px-2">
+                </div>
                 <a href="login.html" class="text-gray-700 hover:text-green-700">🔑 Log In</a>
                 <a href="contact.html" class="text-gray-700 hover:text-green-700">📞 Contact</a>
             </div>
@@ -51,7 +52,7 @@
         <div>Billing and insurance</div>
         <div>Results</div>
         <div>Blog</div>
-        <div>Shop</div>
+        <div>Shop</div> 
     </div>
 
     <div id="healthcareContent" class="hidden flex justify-center items-center space-x-6 p-6 mt-6">
@@ -179,31 +180,31 @@
 
     <!-- Tabs -->
     <div class="tabs">
-        <button class="tab-btn active" onclick="openTab(event, 'community')">Community</button>
+        <button class="tab-btn active" onclick="openTab(event, 'contact')">Contact Us</button>
         <button class="tab-btn" onclick="openTab(event, 'health')">Health & Wellness</button>
         <button class="tab-btn" onclick="openTab(event, 'tech')">Technology & Innovation</button>
         <button class="tab-btn" onclick="openTab(event, 'news')">News & Trends</button>
     </div>
 
     <!-- Community Section -->
-    <div id="community" class="tab-content active">
+    <div id="contact" class="tab-content active">
         <div class="news-card">
-            <img src="assets/images/community.jpg" alt="Community News">
+            <img src="assets/images/community.jpg" alt="Contact Us">
             <p class="category">ARTICLE</p>
-            <h3><a href="your-link-here" class="underline-link">Parker Family Health Center celebrates expansion</a></h3>
+            <h3><a href="contact.html" class="underline-link">Contact Us</a></h3>
         </div>
         <div class="news-card">
-            <img src="assets/images/community.jpg" alt="Community News">
+            <img src="assets/images/community.jpg" alt="Contact">
             <p class="category">PUBLICATION</p>
             <h3><a href="your-link-here" class="underline-link">Clinical and Economic Outcomes of a Pharmacogenomics Program</a></h3>
         </div>
         <div class="news-card">
-            <img src="assets/images/community.jpg" alt="Community News">
+            <img src="assets/images/community.jpg" alt="Contact">
             <p class="category">ARTICLE</p>
             <h3><a href="your-link-here" class="underline-link">Growing something greater in Secaucus, NJ</a></h3>
         </div>
         <div class="news-card">
-            <img src="assets/images/community.jpg" alt="Community News">
+            <img src="assets/images/community.jpg" alt="Contact ">
             <p class="category">ARTICLE</p>
             <h3><a href="your-link-here" class="underline-link">Summer Intern Spotlight: Hear what our interns learned!</a></h3>
 
@@ -351,5 +352,6 @@
 
     <!-- Link to the separate JavaScript file -->
     <script src="script.js"></script>
+
 </body>
 </html>
